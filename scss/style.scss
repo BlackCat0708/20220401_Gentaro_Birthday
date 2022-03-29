@@ -1,0 +1,323 @@
+body{
+  font-family: 'Sawarabi Mincho', serif;
+  color: #3F0F0D;
+  letter-spacing: 1px;
+  background-color: #FBFAED;
+}
+
+// 回到頂部按鈕 --------------------------------------------------------------------------------------------
+.go-to-top{
+  // display: none;
+  // opacity: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  background-color: #8066A3;
+  z-index: 3;
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  text-align: center;
+  line-height: 60px;
+  transition: 0.5s;
+  &:hover{
+    background-color: #4B4859;
+    color: white;
+  }
+}
+
+// 整體
+.container{
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.photo{
+  border: 20px solid white;
+  box-shadow: 0 10px 10px rgba($color: #3F0F0D, $alpha: 0.5);
+}
+
+.title{
+  position: relative;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #3F0F0D;
+  z-index: 2;
+  h1{
+    font-size: 48px;
+    letter-spacing: 5px;
+  }
+  .title-line{
+    width: 100%;
+    color: #FBFAED;
+    text-shadow: 0 0 3px #3F0F0D;
+    position: absolute;
+    z-index: -1;
+    top: 2px;
+    left: 2px;
+    animation: fadeInUp 3s;
+  }
+}
+
+
+// Navbar 導覽列 --------------------------------------------------------------------------------------------
+.bg-dark {
+  background-color: #3F0F0D !important;
+}
+
+.navbar-dark .navbar-toggler:focus{
+  box-shadow: 0 0 0 0;
+}
+
+.nav-item{
+  transition: 0.5s;
+  padding: 0 20px 0 0;
+  &:last-child{
+    padding: 0;
+  }
+}
+
+// Cover 封面 --------------------------------------------------------------------------------------------
+#cover{
+  margin-top: 56px;
+  width: 100%;
+  height: calc(100vh - 50px);
+  position: relative;
+  .cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../images/20220310無字00.jpg) no-repeat 35% center/cover;
+  }
+  .cover-title{
+    width: 90%;
+    max-width: 656px;
+    position: absolute;
+    right: 50%;
+    bottom: 20px;
+    transform: translateX(50%);
+    img{
+      width: 100%;
+      animation: fadeInUp 3s;
+    }
+  }
+  .cover-subtitle{
+    display: none;
+    max-width: 220px;
+    position: absolute;
+  }
+}
+
+// About 關於 --------------------------------------------------------------------------------------------
+#about{
+  .photo{
+    transform: rotate(2deg);
+  }
+  p{
+    margin-bottom: 0;
+  }
+}
+
+// Gallery 作品展示 --------------------------------------------------------------------------------------------
+#gallery{
+  .row{
+    margin: 50px 0 70px;
+  }
+  .col-12:nth-child(2){
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .illustration-title{
+      border-left: 5px solid #3F0F0D;
+      border-right: 5px solid #3F0F0D;
+      padding: 0 20px;
+    }
+    .illustrator{
+      display: flex;
+      a{
+        font-size: 20px;
+        color: #1d9bf0;
+        line-height: 16px;
+        margin-left: 5px;
+        transition: 0.5s;
+        &:hover{
+          color: #4B4859;
+        }
+        &:active{
+          color: #4B4859;
+        }
+      }
+    }
+    .description{
+      color: #ACA09A;
+      text-align: center;
+    }
+    .decoration{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .circle{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #3F0F0D;
+      }
+      .line{
+        width: 100%;
+        height: 1px;
+        background-color: #3F0F0D;
+      }
+      .number{
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+// Cast 參與者 --------------------------------------------------------------------------------------------
+#cast{
+  background-color: #728E73;
+  padding: 80px 0 120px;
+  .container{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .title{
+    .title-line{
+      color: #728E73;
+    }
+  }
+  .category{
+    margin: 20px 0 50px 25px;
+    h3{
+      border-left: 5px solid #3F0F0D;
+      padding-left: 20px;
+    }
+    p{
+      margin-left: 30px;
+      color: white;
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+  }
+  .final{
+    width: 100%;
+    filter: grayscale(40%);
+    box-shadow: 20px 20px 0 #3F0F0D;
+  }
+}
+
+// Footer --------------------------------------------------------------------------------------------
+#footer{
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p{
+    margin: 0;
+    color: white;
+  }
+}
+
+@media(min-width: 992px) {
+  // 整體
+  .container{
+    margin-top: 100px;
+    margin-bottom: 200px;
+  }
+
+  // Cover 封面 --------------------------------------------------------------------------------------------
+  #cover{
+    .cover-title{
+      right: 20px;
+      bottom: 20px;
+      transform: translateX(0);
+    }
+    .cover-subtitle{
+      display: block;
+      top: 50px;
+      left: calc(5vw);
+      img{
+        width: 100%;
+        animation: fadeInDown 3s;
+      }
+    }
+  }
+
+  // About 關於 --------------------------------------------------------------------------------------------
+  #about{
+    .photo{
+      transform: rotate(-2deg);
+    }
+  }
+
+  // Gallery 作品展示 --------------------------------------------------------------------------------------------
+  #gallery{
+    .photo{
+      transform: rotate(-2deg);
+    }
+    .row{
+      margin: 100px 0 200px;
+      &:nth-child(even){
+        flex-direction: row-reverse;
+        .photo{
+          transform: rotate(2deg);
+        }
+        .col-12:nth-child(2){
+          .decoration{
+            left: 0;
+            right: auto;
+          }
+        }
+      }
+    }
+    .col-12:nth-child(2){
+      padding: 0 50px !important;
+      .decoration{
+        width: auto;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        .line{
+          width: 1px;
+          height: 80%;
+        }
+        .number{
+          margin-left: 0;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  // Cast 參與者 --------------------------------------------------------------------------------------------
+  #cast{
+    padding: 100px 0 150px;
+  }
+}
+
+@media(min-width: 1200px){
+  // Cover 封面 --------------------------------------------------------------------------------------------
+  #cover{
+    height: 100vh;
+    .cover-subtitle{
+      left: calc(40px + 5vw);
+    }
+  }
+}
+
+@media(min-width: 1400px){
+  // Cover 封面 --------------------------------------------------------------------------------------------
+  #cover{
+    .cover-subtitle{
+      left: calc(-150px + 25vw);
+    }
+  }
+}
