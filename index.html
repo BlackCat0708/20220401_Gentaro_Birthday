@@ -7,8 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- bootstrap -->
   <link rel="stylesheet" href="./css/bootstrap.css">
-  <!-- Sawarabi Mincho 字型 -->
-  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&family=Sawarabi+Mincho&display=swap"
+    rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <!-- animate.css -->
@@ -36,13 +38,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto me-0 mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link link-to-about" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#gallery">Gallery</a>
+            <a class="nav-link link-to-gallery" href="#gallery">Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#cast">Cast</a>
+            <a class="nav-link link-to-cast" href="#cast">Cast</a>
           </li>
         </ul>
       </div>
@@ -53,10 +55,10 @@
   <section id="cover">
     <div class="cover"></div>
     <div class="cover-title">
-      <img src="./images/journey.png">
+      <img class="wow animate__fadeInUp" data-wow-duration="3s" src=" ./images/journey.png">
     </div>
     <div class="cover-subtitle">
-      <img src="./images/yumeno_gentaro.png">
+      <img class="wow animate__fadeInDown" data-wow-duration="3s" src="./images/yumeno_gentaro.png">
     </div>
   </section>
 
@@ -64,10 +66,12 @@
   <section id="about">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-lg-6 px-4">
-          <img class="w-100 photo" src="./images/richa-sharma-p6ZWMgiiE5c-unsplash.jpg">
+        <div class="col-12 col-lg-6 px-4 wow animate__fadeInLeft" data-wow-offset="300" data-wow-duration="3s">
+          <img class=" w-100 photo" src="./images/richa-sharma-p6ZWMgiiE5c-unsplash.jpg">
         </div>
-        <div class="col-12 col-lg-6 mt-5 mt-lg-0 ps-lg-5 d-flex flex-column justify-content-center align-items-center">
+        <div
+          class="col-12 col-lg-6 mt-5 mt-lg-0 ps-lg-5 d-flex flex-column justify-content-center align-items-center wow animate__fadeInRight"
+          data-wow-offset="300" data-wow-duration="3s">
           <h3>- 04.01 夢野幻太郎誕生日おめでとう -</h3>
           <p>私たちは台湾のファンです</p>
           <p>今回は幻太郎のために誕生日Webを作る！</p>
@@ -79,18 +83,18 @@
   <!-- Gallery 作品展示 -->
   <section id="gallery">
     <div class="container">
-      <div class="title">
+      <div class="title wow animate__fadeInUp" data-wow-offset="300">
         <h1>「 Gallery 」</h1>
-        <h1 class="title-line">「 Gallery 」</h1>
+        <h1 class="title-line wow animate__fadeInUp" data-wow-duration="5s" data-wow-delay="1s">「 Gallery 」</h1>
       </div>
       <!-- 羽澤さくや -->
       <div class="row">
-        <div class="col-12 col-lg-6 mb-5 mb-lg-0">
+        <div class="col-12 col-lg-6 mb-5 mb-lg-0 wow animate__fadeInRight" data-wow-offset="300" data-wow-duration="3s">
           <a class="image-popup-no-margins" href="./images/2022太郎生日企劃-羽澤さくや.jpg">
             <img class="w-100 photo" src="./images/2022太郎生日企劃-羽澤さくや.jpg">
           </a>
         </div>
-        <div class="col-12 col-lg-6 px-3">
+        <div class="col-12 col-lg-6 px-3 wow animate__fadeInLeft" data-wow-offset="300" data-wow-duration="3s">
           <h3 class="illustration-title">水族館の隅</h3>
           <div class="illustrator">
             <h5 class="nickname">Illustrator / 羽澤さくや</h5>
@@ -98,13 +102,13 @@
               <i class="fa-brands fa-twitter"></i>
             </a>
           </div>
-          <p class="description py-3">
+          <p class="description py-3 wow animate__fadeInLeft" data-wow-duration="3s" data-wow-delay="1s">
             ARBイベントのおかげで、幻太郎のこの服本当に大好きです。<br>
             この衣装で旅行を楽しんでいただければ幸いです。<br>
             平日は忙しいが、リラックスしてプレッシャーを解放する必要があります。<br>
             作家として、インスピレーションには欠かせないものです。
           </p>
-          <div class="decoration">
+          <div class="decoration wow animate__fadeInDown" data-wow-duration="3s" data-wow-delay="3s">
             <div class="circle"></div>
             <div class="line"></div>
             <div class="number">001</div>
@@ -114,26 +118,23 @@
 
       <!-- 阿行 -->
       <div class="row">
-        <div class="col-12 col-lg-6 mb-5 mb-lg-0">
+        <div class="col-12 col-lg-6 mb-5 mb-lg-0 wow animate__fadeInLeft" data-wow-offset="300" data-wow-duration="3s">
           <a class="image-popup-no-margins" href="./images/richa-sharma-p6ZWMgiiE5c-unsplash.jpg">
             <img class="w-100 photo" src="./images/richa-sharma-p6ZWMgiiE5c-unsplash.jpg">
           </a>
         </div>
-        <div class="col-12 col-lg-6 px-3">
-          <h3 class="illustration-title">水族館の隅</h3>
+        <div class="col-12 col-lg-6 px-3 wow animate__fadeInRight" data-wow-offset="300" data-wow-duration="3s">
+          <h3 class="illustration-title">Title</h3>
           <div class="illustrator">
             <h5 class="nickname">Illustrator / 阿行</h5>
-            <a href="https://twitter.com/Seven_color7ST" target="_blank">
+            <a href="#" target="_blank">
               <i class="fa-brands fa-twitter"></i>
             </a>
           </div>
-          <p class="description py-3">
-            ARBイベントのおかげで、幻太郎のこの服本当に大好きです。<br>
-            この衣装で旅行を楽しんでいただければ幸いです。<br>
-            平日は忙しいが、リラックスしてプレッシャーを解放する必要があります。<br>
-            作家として、インスピレーションには欠かせないものです。
+          <p class="description py-3 wow animate__fadeInRight" data-wow-duration="3s" data-wow-delay="1s">
+            123456789
           </p>
-          <div class="decoration">
+          <div class="decoration wow animate__fadeInDown" data-wow-duration="3s" data-wow-delay="3s">
             <div class="circle"></div>
             <div class="line"></div>
             <div class="number">002</div>
@@ -143,12 +144,12 @@
 
       <!-- 黑喵 -->
       <div class="row">
-        <div class="col-12 col-lg-6 mb-5 mb-lg-0">
+        <div class="col-12 col-lg-6 mb-5 mb-lg-0 wow animate__fadeInRight" data-wow-offset="300" data-wow-duration="3s">
           <a class="image-popup-no-margins" href="./images/20220310無字00.jpg">
             <img class="w-100 photo" src="./images/20220310無字43.jpg">
           </a>
         </div>
-        <div class="col-12 col-lg-6 px-3">
+        <div class="col-12 col-lg-6 px-3 wow animate__fadeInLeft" data-wow-offset="300" data-wow-duration="3s">
           <h3 class="illustration-title">どこかへ</h3>
           <div class="illustrator">
             <h5 class="nickname">Illustrator / 黑喵</h5>
@@ -156,10 +157,10 @@
               <i class="fa-brands fa-twitter"></i>
             </a>
           </div>
-          <p class="description py-3">
+          <p class="description py-3 wow animate__fadeInLeft" data-wow-duration="3s" data-wow-delay="1s">
             Looking forward to the next trip.
           </p>
-          <div class="decoration">
+          <div class="decoration wow animate__fadeInDown" data-wow-duration="3s" data-wow-delay="3s">
             <div class="circle"></div>
             <div class="line"></div>
             <div class="number">003</div>
@@ -169,26 +170,25 @@
 
       <!-- 貓咪 -->
       <div class="row">
-        <div class="col-12 col-lg-6 mb-5 mb-lg-0">
-          <a class="image-popup-no-margins" href="./images/richa-sharma-p6ZWMgiiE5c-unsplash.jpg">
-            <img class="w-100 photo" src="./images/richa-sharma-p6ZWMgiiE5c-unsplash.jpg">
+        <div class="col-12 col-lg-6 mb-5 mb-lg-0 wow animate__fadeInLeft" data-wow-offset="300" data-wow-duration="3s">
+          <a class="image-popup-no-margins" href="./images/27ENxeSLQibVfkBqcGZ8uL.jpg">
+            <img class="w-100 photo" src="./images/27ENxeSLQibVfkBqcGZ8uL.jpg">
           </a>
         </div>
-        <div class="col-12 col-lg-6 px-3">
-          <h3 class="illustration-title">水族館の隅</h3>
+        <div class="col-12 col-lg-6 px-3 wow animate__fadeInRight" data-wow-offset="300" data-wow-duration="3s">
+          <h3 class="illustration-title">「見て」</h3>
           <div class="illustrator">
             <h5 class="nickname">Illustrator / 貓咪</h5>
-            <a href="https://twitter.com/Seven_color7ST" target="_blank">
+            <a href="https://twitter.com/yingchencat" target="_blank">
               <i class="fa-brands fa-twitter"></i>
             </a>
           </div>
-          <p class="description py-3">
-            ARBイベントのおかげで、幻太郎のこの服本当に大好きです。<br>
-            この衣装で旅行を楽しんでいただければ幸いです。<br>
-            平日は忙しいが、リラックスしてプレッシャーを解放する必要があります。<br>
-            作家として、インスピレーションには欠かせないものです。
+          <p class="description py-3 wow animate__fadeInRight" data-wow-duration="3s" data-wow-delay="1s">
+            Calyx of Fling posse, happy birthday<br>
+            I want to see you go to the beach with your dearest posse ,so I created this art.<br>
+            The happy smiling you in the eyes of Daisu and Ramuda.<br>
           </p>
-          <div class="decoration">
+          <div class="decoration wow animate__fadeInDown" data-wow-duration="3s" data-wow-delay="3s">
             <div class="circle"></div>
             <div class="line"></div>
             <div class="number">004</div>
@@ -205,7 +205,7 @@
         <div class="col-12 col-lg-7">
           <div class="title">
             <h1>「 Cast 」</h1>
-            <h1 class="title-line">「 Cast 」</h1>
+            <h1 class="title-line wow animate__fadeInUp" data-wow-offset="300" data-wow-duration="5s">「 Cast 」</h1>
           </div>
           <div class="category">
             <h3>Web Design / Cover</h3>
@@ -219,7 +219,7 @@
           </div>
         </div>
         <div class="col-12 col-lg-5 px-5 d-flex justify-content-center align-items-center">
-          <img class="final" src="./images/emanuela-picone-4sgszK_uqmA-unsplash.jpg" alt="">
+          <img class="final" src="./images/emanuela-picone-4sgszK_uqmA-unsplash.jpg">
         </div>
       </div>
     </div>
@@ -229,6 +229,27 @@
   <section id="footer" class="bg-dark">
     <p class="text-center">Copyright © BlackCat 2022</p>
   </section>
+
+  <!-- 花瓣雨 -->
+  <div class="flower">
+    <div id="particles-js"></div>
+    <!-- 視差元素 -->
+    <div class="white-circle"></div>
+    <div class="purple-line"></div>
+  </div>
+
+  <!-- 裁切線 -->
+  <div class="bleed">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="date">0401</div>
+  </div>
+
+  <!-- loading -->
+  <div id="loading">
+    <img src="./images/journey00.png">
+    <h3>Loading ... <span id="progress">0</span>%</h3>
+  </div>
 
   <!-- jQuery -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js'></script>
@@ -241,10 +262,162 @@
   <script src="./js/gsap.js"></script>
   <script src="./js/ScrollTrigger.js"></script>
   <script src="./js/ScrollToPlugin.js"></script>
+  <!-- particles.js -->
+  <script src="./js/particles.min.js"></script>
+  <script src="./js/app.js"></script>
+  <!-- wow.js -->
+  <script src="./js/wow.min.js"></script>
   <script>
+    const loading = document.getElementById('loading')
+    const progress = document.getElementById('progress')
+    const imgs = document.getElementsByTagName('img')
+
+    let loaded = 0
+    for (const img of imgs) {
+      img.onload = () => {
+        loaded++
+        progress.innerText = Math.round(loaded / imgs.length * 100)
+      }
+    }
+
+    window.onload = () => {
+      loading.style.opacity = 0
+      loading.style.display = "none"
+    }
+
     // GSAP --------------------------------------------------------------------------------------------------
     // 註冊 Plugins
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+    // ScrollTrigger 滾動軸 -------------------------------------------------------------------------------------------------
+    // go-to-top 顯示隱藏
+    gsap.to('.go-to-top', {
+      scrollTrigger: {
+        trigger: '#about',
+        start: '40% bottom',
+        end: '100% bottom',
+        toggleActions: 'play none none reverse',
+      },
+      display: 'block',
+      opacity: 1,
+    })
+
+    $('.link-to-about').on('click', function (e) {
+      e.preventDefault();
+      gsap.to($(window), {
+        scrollTo: {
+          y: '#about',
+          offsetY: 250
+        },
+        duration: 0.5,
+        ease: 'none'
+      })
+    })
+
+    $('.link-to-gallery').on('click', function (e) {
+      e.preventDefault();
+      gsap.to($(window), {
+        scrollTo: {
+          y: '#gallery',
+          offsetY: 180
+        },
+        duration: 0.5,
+        ease: 'none'
+      })
+    })
+
+    $('.link-to-cast').on('click', function (e) {
+      e.preventDefault();
+      gsap.to($(window), {
+        scrollTo: {
+          y: '#cast'
+        },
+        duration: 0.5,
+        ease: 'none'
+      })
+    })
+
+    // 花瓣雨 ------------------------------------------------------------------------------------------------
+    // 創建花瓣的數目
+    function createPetal(petalNumber) {
+      for (let i = 0; i < petalNumber; i++) {
+        $('.flower').append('<img class="petal" src="./images/petal.png">')
+      }
+      const petals = gsap.utils.toArray('.petal')
+      return petals
+    }
+
+    // 設定補間動畫預設值
+    function setPetalTween(petals) {
+      gsap.set('.flower', {
+        perspective: 300
+      })
+      petals.forEach(function (petal, index) {
+        gsap.set(petal, {
+          transformOrigin: '0 50%',
+          position: 'absolute',
+          left: gsap.utils.random(-$(window).width() / 2, $(window).width()),
+          top: gsap.utils.random(-100, -200),
+          rotation: -40,
+          scale: 'random(0.1, 0.5)'
+        })
+      })
+      return petals
+    }
+    // 播放時間軸動畫
+    function playPetalTimeline(petals) {
+      const tl = gsap.timeline({
+        repeat: -1
+      })
+      tl.to(petals, {
+        x: `+=${$(window).width() * 1.5}`,
+        y: `+=${$(window).width() * 1.5}`,
+        z: 'random(-100, 500)',
+        stagger: function (index) {
+          return gsap.utils.random(index + 5, (index + 5) * 2, 1)
+        },
+        rotation: 'random(0, 720)',
+        duration: 'random(10, 20, 0.1)',
+        ease: 'none'
+      })
+    }
+
+    // 管道流程，可以設定一系列的流程，將函式結果 return 給下一個函式，當成參數來接收
+    const playPetal = gsap.utils.pipe(createPetal, setPetalTween, playPetalTimeline)
+    playPetal(80)
+
+    // 視差
+    const float_tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: 'body',
+        start: 'top 100%',
+        end: 'bottom 100%',
+        scrub: 5,
+      },
+      ease: 'none'
+    })
+
+    // 使用 timeline 操作進場位置
+    float_tl
+      .from('.white-circle', {
+        top: '150%'
+      })
+      .from('.purple-line', {
+        top: '-80%',
+        right: '-50%'
+      }, '<')
+
+    // wow ------------------------------------------------------------------------------------------------
+    wow = new WOW(
+      {
+        boxClass: 'wow',
+        animateClass: 'animate__animated',
+        offset: 0,
+        mobile: true,
+        live: true
+      }
+    )
+    wow.init();
   </script>
 </body>
 

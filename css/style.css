@@ -2,11 +2,15 @@
 body {
   font-family: 'Sawarabi Mincho', serif;
   color: #3F0F0D;
-  letter-spacing: 1px;
-  background-color: #FBFAED;
+  letter-spacing: 1.5px;
+  background: url(../images/background.jpg) no-repeat fixed center;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .go-to-top {
+  display: none;
+  opacity: 0;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -30,7 +34,7 @@ body {
 }
 
 .container {
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 100px;
 }
 
@@ -60,8 +64,6 @@ body {
   z-index: -1;
   top: 2px;
   left: 2px;
-  -webkit-animation: fadeInUp 3s;
-          animation: fadeInUp 3s;
 }
 
 .bg-dark {
@@ -109,8 +111,6 @@ body {
 
 #cover .cover-title img {
   width: 100%;
-  -webkit-animation: fadeInUp 3s;
-          animation: fadeInUp 3s;
 }
 
 #cover .cover-subtitle {
@@ -122,6 +122,11 @@ body {
 #about .photo {
   -webkit-transform: rotate(2deg);
           transform: rotate(2deg);
+}
+
+#about h3 {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 #about p {
@@ -161,10 +166,14 @@ body {
   display: flex;
 }
 
+#gallery .col-12:nth-child(2) .illustrator .nickname {
+  font-family: 'Noto Serif TC', serif;
+}
+
 #gallery .col-12:nth-child(2) .illustrator a {
   font-size: 20px;
   color: #1d9bf0;
-  line-height: 16px;
+  line-height: 25px;
   margin-left: 5px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -237,6 +246,7 @@ body {
 }
 
 #cast .category p {
+  font-family: 'Noto Serif TC', serif;
   margin-left: 30px;
   color: white;
   margin-bottom: 5px;
@@ -269,10 +279,62 @@ body {
   color: white;
 }
 
+.flower {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: -10;
+}
+
+.flower .petal {
+  background: url(../images/petal.png) no-repeat;
+}
+
+.bleed {
+  display: none;
+}
+
+#loading {
+  width: 100vw;
+  height: 100vh;
+  background: #3F0F0D;
+  position: fixed;
+  top: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  text-align: center;
+  color: #728E73;
+  z-index: 2000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#loading img {
+  width: 80%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+#loading h3 {
+  font-size: 20px;
+}
+
 @media (min-width: 992px) {
   .container {
-    margin-top: 100px;
-    margin-bottom: 200px;
+    margin-top: 200px;
+    margin-bottom: 300px;
   }
   #cover .cover-title {
     right: 20px;
@@ -287,12 +349,13 @@ body {
   }
   #cover .cover-subtitle img {
     width: 100%;
-    -webkit-animation: fadeInDown 3s;
-            animation: fadeInDown 3s;
   }
   #about .photo {
     -webkit-transform: rotate(-2deg);
             transform: rotate(-2deg);
+  }
+  #about h3 {
+    font-size: 24px;
   }
   #gallery .photo {
     -webkit-transform: rotate(-2deg);
@@ -342,6 +405,27 @@ body {
   #cast {
     padding: 100px 0 150px;
   }
+  .white-circle {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .purple-line {
+    width: 20px;
+    height: 800px;
+    background-color: #8066A3;
+    position: absolute;
+    top: 35%;
+    right: 180px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
 }
 
 @media (min-width: 1200px) {
@@ -350,6 +434,53 @@ body {
   }
   #cover .cover-subtitle {
     left: calc(40px + 5vw);
+  }
+  .bleed {
+    display: block;
+  }
+  .bleed .left {
+    width: 180px;
+    height: 2px;
+    background: #3F0F0D;
+    position: fixed;
+    top: 100px;
+    z-index: -1;
+  }
+  .bleed .left::before {
+    content: "";
+    width: 2px;
+    height: 180px;
+    background-color: #3F0F0D;
+    position: fixed;
+    top: 56px;
+    left: 35px;
+  }
+  .bleed .right {
+    width: 180px;
+    height: 2px;
+    background: #3F0F0D;
+    position: fixed;
+    top: 130px;
+    right: 0;
+    z-index: -1;
+  }
+  .bleed .right::before {
+    content: "";
+    width: 2px;
+    height: 180px;
+    background-color: #3F0F0D;
+    position: fixed;
+    top: 56px;
+    right: 80px;
+  }
+  .bleed .date {
+    color: #3F0F0D;
+    font-size: 20px;
+    position: fixed;
+    bottom: 75px;
+    left: 75px;
+    font-weight: bold;
+    z-index: -1;
   }
 }
 
