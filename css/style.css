@@ -156,6 +156,7 @@ body {
 }
 
 #gallery .col-12:nth-child(2) .illustration-title {
+  text-align: center;
   border-left: 5px solid #3F0F0D;
   border-right: 5px solid #3F0F0D;
   padding: 0 20px;
