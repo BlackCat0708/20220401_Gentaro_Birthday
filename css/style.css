@@ -2,7 +2,7 @@
 body {
   font-family: 'Sawarabi Mincho', serif;
   color: #3F0F0D;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.5px;
   background: url(../images/background.jpg) no-repeat fixed center;
   position: relative;
   overflow-x: hidden;
@@ -52,7 +52,7 @@ body {
 }
 
 .title h1 {
-  font-size: 48px;
+  font-size: 42px;
   letter-spacing: 5px;
 }
 
@@ -280,8 +280,9 @@ body {
 }
 
 .flower {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
   position: fixed;
   top: 0;
   z-index: -10;

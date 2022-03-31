@@ -370,9 +370,9 @@
 
     // 設定補間動畫預設值
     function setPetalTween(petals) {
-      gsap.set('.flower', {
-        perspective: 300
-      })
+      // gsap.set('.flower', {
+      //   perspective: 300
+      // })
       petals.forEach(function (petal, index) {
         gsap.set(petal, {
           transformOrigin: '0 50%',
@@ -392,7 +392,7 @@
       })
       tl.to(petals, {
         x: `+=${$(window).width() * 1.5}`,
-        y: `+=${$(window).width() * 1.5}`,
+        y: `+=${$(window).height() * 1.5}`,
         z: 'random(-100, 500)',
         stagger: function (index) {
           return gsap.utils.random(index + 5, (index + 5) * 2, 1)
@@ -405,7 +405,7 @@
 
     // 管道流程，可以設定一系列的流程，將函式結果 return 給下一個函式，當成參數來接收
     const playPetal = gsap.utils.pipe(createPetal, setPetalTween, playPetalTimeline)
-    playPetal(80)
+    playPetal(50)
 
     // 視差
     const float_tl = gsap.timeline({
